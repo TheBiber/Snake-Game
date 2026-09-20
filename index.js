@@ -26,9 +26,36 @@ function draw() {
 // Draw snake
 function drawSnake() {
   snake.forEach((segment) => {
-    const snakeElement = createGameElement("div", "snake");
-    setPosition(snakeElement, segment);
-    board.appendChild(snakeElement);
+    if (segment != snake[0]) {
+      const snakeElement = createGameElement("div");
+      const snakeBody = createGameElement("img", "snake-hb");
+      snakeBody.src = "snake-body.png";
+      snakeElement.appendChild(snakeBody);
+      setPosition(snakeElement, segment);
+      board.appendChild(snakeElement);
+    } else {
+      const snakeElement = createGameElement("div");
+      const snakeHead = createGameElement("img", "snake-hb");
+
+      switch (direction) {
+        case "up":
+          snakeHead.src = "snake-head-up.png";
+          break;
+        case "down":
+          snakeHead.src = "snake-head-down.png";
+          break;
+        case "left":
+          snakeHead.src = "snake-head-left.png";
+          break;
+        case "right":
+          snakeHead.src = "snake-head-right.png";
+          break;
+      }
+
+      snakeElement.appendChild(snakeHead);
+      setPosition(snakeElement, segment);
+      board.appendChild(snakeElement);
+    }
   });
 }
 
@@ -51,7 +78,10 @@ function setPosition(element, position) {
 // Draw food function
 function drawFood() {
   if (gameStarted) {
-    const foodElement = createGameElement("div", "food");
+    const foodElement = createGameElement("div");
+    const apple = createGameElement("img", "snake-hb");
+    apple.src = "apple.png";
+    foodElement.appendChild(apple);
     setPosition(foodElement, food);
     board.appendChild(foodElement);
   }

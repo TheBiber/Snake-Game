@@ -84,6 +84,11 @@ body,
   border: #999 5px solid;
 }
 
+.snake-hb {
+  width: 20px;
+  height: 20px;
+}
+
 #logo {
   position: absolute;
 }
