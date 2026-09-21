@@ -537,21 +537,6 @@
 /* ============================= */
 /* SNAKE GAME STYLE */
 /* ============================= */
-/* ============================= */
-/* SNAKE GAME STYLE */
-/* ============================= */
-
-/* ============================= */
-/* SNAKE GAME STYLE */
-/* ============================= */
-
-/* ============================= */
-/* SNAKE GAME STYLE */
-/* ============================= */
-
-/* ============================= */
-/* SNAKE GAME STYLE */
-/* ============================= */
 
 .snake-game-body {
   display: flex;
@@ -612,6 +597,7 @@
 
 .game-border-3 {
   border: #8b966c solid 35px; /* הגדלנו עובי מסגרת */
+  border-radius: 10px;
   background-color: #c4cfa3;
   display: flex;
   align-items: center;
@@ -621,7 +607,7 @@
 /* מיקום הטקסט בדיוק במרכז מעל הלוח */
 #instruction-text {
   font-family: "VT323", monospace !important;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: 45px; /* הגדלנו את הפונט שיתאים ללוח הגדול */
   color: #333;
